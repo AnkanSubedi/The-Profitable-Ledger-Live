@@ -1,0 +1,35 @@
+.App-header {
+  background-color: #7b1827;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "termina";
+  font-size: 16px;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.logo:hover {
+  color: #F9E4BC;
+  font-size: 100%;
+}
+
+.navigation button {
+  background: none; /* Remove default button background */
+  border: none; /* Remove button border */
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "termina";
+  font-size: inherit; /* Match parent font size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.navigation button:hover {
+  color: #F9E4BC;
+  font-size: 100%;
+}

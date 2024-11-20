@@ -1,0 +1,23 @@
+/* Services Section Styles */
+.services-main-section {
+    height: 50vh;
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+  
+.services-main-section h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+    
+.services-main-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.services-main-section li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}

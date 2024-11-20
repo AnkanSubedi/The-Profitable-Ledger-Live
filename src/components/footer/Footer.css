@@ -1,0 +1,18 @@
+.app-footer {
+    background-color: #7b1827; /* Match the navbar color */
+    padding: 15px;
+    display: flex;
+    justify-content: center; /* Center-align the content */
+    align-items: center;
+    height: 60px; /* Adjust height as needed */
+    color: #ffffff; /* Text color */
+    font-family: "termina"; /* Match the navbar font */
+    font-size: 14px; /* Adjust font size */
+    margin-top: auto; /* Push footer to the bottom of the page */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: inherit;
+}
