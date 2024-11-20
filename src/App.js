@@ -7,7 +7,7 @@ import {Landing, Services, About, Team} from "./routes/index.js"
 
 function App() {
   return (
-    <Router>
+    <Router basename='/The-Profitable-Ledger-Live'>
       <Navigation/>
       <Routes>
         <Route path="/" element={<Landing/>} />
