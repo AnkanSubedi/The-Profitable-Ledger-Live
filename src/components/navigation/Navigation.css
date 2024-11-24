@@ -1,5 +1,5 @@
 .App-header {
-  background-color: #7b1827;
+  background-color: #A42134;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -14,7 +14,7 @@
 }
 
 .logo:hover {
-  color: #F9E4BC;
+  color: #E8D8C4;
   font-size: 100%;
 }
 
@@ -30,6 +30,6 @@
 }
 
 .navigation button:hover {
-  color: #F9E4BC;
+  color: #E8D8C4;
   font-size: 100%;
 }

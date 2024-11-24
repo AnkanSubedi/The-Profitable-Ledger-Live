@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url(../../assets/bannerImage.jpg);
+    background-image: url(../../assets/bannerImage2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,27 +36,23 @@
 }
 
 /* Learn more button  */
+
 .learn-more-button {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #201E4B;
+  text-decoration: none;
+  border: 2px solid #201E4B;
   padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #7b1827; /* A nice green color */
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .learn-more-button:hover {
-  background-color: #000; /* Darker green on hover */
-  transform: scale(1.05); /* Slightly larger on hover */
-}
-
-.learn-more-button:active {
-  background-color: #F9E4BC; /* Even darker green on click */
-  transform: scale(0.98); /* Slightly smaller when clicked */
+  background-color: #201E4B;
+  color: #fff;
 }
 
 /* Services Section Styles */
@@ -182,7 +178,7 @@
   
   .contact-section button {
     padding: 10px;
-    background-color: #ff6600;
+    background-color: #201E4B;
     color: white;
     border: none;
     border-radius: 5px;
@@ -190,5 +186,5 @@
   }
   
   .contact-section button:hover {
-    background-color: #cc5200;
+    background-color: #2a2849;
   }

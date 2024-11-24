@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/The-Profitable-Ledger-Live/static/css/main.ec78031c.css",
-    "main.js": "/The-Profitable-Ledger-Live/static/js/main.764a92dc.js",
+    "main.css": "/The-Profitable-Ledger-Live/static/css/main.6129b547.css",
+    "main.js": "/The-Profitable-Ledger-Live/static/js/main.62cbbd3f.js",
     "static/js/453.6b5b42c0.chunk.js": "/The-Profitable-Ledger-Live/static/js/453.6b5b42c0.chunk.js",
-    "static/media/bannerImage.jpg": "/The-Profitable-Ledger-Live/static/media/bannerImage.d2f83d8455781de4d80f.jpg",
+    "static/media/bannerImage2.jpg": "/The-Profitable-Ledger-Live/static/media/bannerImage2.c2417bed7d099eaeeb1b.jpg",
     "static/media/Ribbon.jpg": "/The-Profitable-Ledger-Live/static/media/Ribbon.bc163a5ab027a97c6df2.jpg",
     "static/media/ScrollButton.png": "/The-Profitable-Ledger-Live/static/media/ScrollButton.c84489cc5458bcf5966e.png",
     "index.html": "/The-Profitable-Ledger-Live/index.html",
-    "main.ec78031c.css.map": "/The-Profitable-Ledger-Live/static/css/main.ec78031c.css.map",
-    "main.764a92dc.js.map": "/The-Profitable-Ledger-Live/static/js/main.764a92dc.js.map",
+    "main.6129b547.css.map": "/The-Profitable-Ledger-Live/static/css/main.6129b547.css.map",
+    "main.62cbbd3f.js.map": "/The-Profitable-Ledger-Live/static/js/main.62cbbd3f.js.map",
     "453.6b5b42c0.chunk.js.map": "/The-Profitable-Ledger-Live/static/js/453.6b5b42c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec78031c.css",
-    "static/js/main.764a92dc.js"
+    "static/css/main.6129b547.css",
+    "static/js/main.62cbbd3f.js"
   ]
 }
