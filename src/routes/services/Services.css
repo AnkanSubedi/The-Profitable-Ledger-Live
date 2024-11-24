@@ -1,23 +1,67 @@
-/* Services Section Styles */
+/* General Section Styles */
 .services-main-section {
-    height: 50vh;
-    padding: 40px;
-    background-color: #fff;
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
     text-align: center;
 }
-  
-.services-main-section h3 {
-    font-size: 1.8rem;
-    color: #333;
+
+.services-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
-    
-.services-main-section ul {
-    list-style-type: none;
+
+.services-list {
+    list-style: none;
     padding: 0;
 }
-  
-.services-main-section li {
-    margin: 10px 0;
+
+.service-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 20px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #201E4B;
+}
+
+.service-item h4 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #201E4B;
+}
+
+.service-item p {
+    margin: 5px 0 0;
     font-size: 1rem;
     color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-icon {
+        margin-bottom: 10px;
+    }
+
+    .service-item h4 {
+        text-align: left;
+    }
 }
