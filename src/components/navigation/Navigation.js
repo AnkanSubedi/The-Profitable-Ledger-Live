@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import './Navigation.css';
+import "./Navigation.css";
 import ScrollToTopButton from "../scrollToTop/ScrollToTopButton";
 
 function Navigation() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
     const handleNavigation = (sectionId) => {
+        setIsMenuOpen(false); // Close the menu
         if (location.pathname !== "/") {
-            // Navigate to Landing page if not already there
             navigate("/");
         }
-        // Scroll to the section after a small delay
         setTimeout(() => {
             const sectionElement = document.getElementById(sectionId);
             if (sectionElement) {
@@ -21,32 +23,35 @@ function Navigation() {
         }, 100); // Allow time for the Landing page to load
     };
 
-    const navigateToStart = () => {
-        if (location.pathname !== "/") {
-            navigate("/"); // Navigate to the Landing page
-        }
-        setTimeout(() => {
-            window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top
-        }, 100); // Delay ensures the Landing page is loaded
-    };
-
     return (
         <>
-        <header className="App-header">
-            <div className="logo" onClick={navigateToStart} style={{ cursor: "pointer" }}>
-                <h1>The Profitable Ledger</h1>
-            </div>
-            <nav className="navigation">
-                <button onClick={() => handleNavigation("main")}>Main</button>
-                <button onClick={() => handleNavigation("services")}>Services</button>
-                <button onClick={() => handleNavigation("about")}>What We Do</button>
-                <button onClick={() => handleNavigation("team")}>Our Team</button>
-                <button onClick={() => handleNavigation("contact")}>Contact Us</button>
-            </nav>
-        </header>
+            <header className="App-header">
+                <div className="logo" onClick={() => handleNavigation("/")}>
+                    The Profitable Ledger
+                </div>
+                <button className="hamburger" onClick={toggleMenu}>
+                    ☰
+                </button>
+                <div className={`menu-overlay ${isMenuOpen ? "open" : ""}`}>
+                    <nav className="menu-links">
+                        <button onClick={() => handleNavigation("/")}>Main</button>
+                        <button onClick={() => handleNavigation("services")}>Services</button>
+                        <button onClick={() => handleNavigation("about")}>What We Do</button>
+                        <button onClick={() => handleNavigation("team")}>Our Team</button>
+                        <button onClick={() => handleNavigation("contact")}>Contact Us</button>
+                    </nav>
+                </div>
+                <nav className="navigation">
+                    <button onClick={() => handleNavigation("/")}>Main</button>
+                    <button onClick={() => handleNavigation("services")}>Services</button>
+                    <button onClick={() => handleNavigation("about")}>What We Do</button>
+                    <button onClick={() => handleNavigation("team")}>Our Team</button>
+                    <button onClick={() => handleNavigation("contact")}>Contact Us</button>
+                </nav>
+            </header>
 
-        {/* Add ScrollToTopButton */}
-        <ScrollToTopButton />
+            {/* Add ScrollToTopButton */}
+            <ScrollToTopButton />
         </>
     );
 }

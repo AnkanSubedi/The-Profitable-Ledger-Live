@@ -1,3 +1,19 @@
+/* .main-section {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(../../assets/bannerImage2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } */
+
 /* About Page Styles */
 .about-main-section {
     padding: 60px 20px;

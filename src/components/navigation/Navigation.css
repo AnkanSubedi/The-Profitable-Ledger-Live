@@ -1,35 +1,133 @@
+/* General styles for header */
 .App-header {
   background-color: #A42134;
-  padding: 15px;
+  padding: 20px 30px; /* Increase padding to make the header taller */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
+/* Logo styling */
 .logo {
   font-family: "termina";
-  font-size: 16px;
-  font-style: normal;
+  font-size: 26px; /* Slightly larger font size for the logo */
+  font-weight: bold;
   color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevents logo from shrinking */
 }
 
 .logo:hover {
   color: #E8D8C4;
-  font-size: 100%;
 }
 
+/* Desktop navigation menu */
+.navigation {
+  display: flex;
+  gap: 20px; /* Adjust gap between navigation items */
+  align-items: center;
+}
+
+/* Desktop navigation buttons */
 .navigation button {
   background: none; /* Remove default button background */
   border: none; /* Remove button border */
-  margin: 0 15px;
+  margin: 0 20px; /* Increase margin for better spacing */
   text-decoration: none;
   color: #ffffff;
   font-family: "termina";
-  font-size: inherit; /* Match parent font size */
+  font-size: 16px; /* Ensure button text is legible */
   cursor: pointer; /* Pointer cursor on hover */
 }
 
 .navigation button:hover {
   color: #E8D8C4;
-  font-size: 100%;
+}
+
+/* Hamburger menu for small screens */
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  z-index: 1001;
+}
+
+/* Mobile menu overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-overlay.open {
+  display: flex; /* Display overlay when open */
+  transform: translateY(0);
+}
+
+/* Mobile menu links */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-links button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "termina";
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-links button:hover {
+  background-color: white;
+  color: #A42134;
+  border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger menu on small screens */
+  }
+
+  .navigation {
+    display: none; /* Hide desktop menu on small screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-overlay {
+    display: none; /* Hide overlay for larger screens */
+    padding: 25px 30px; /* Increase padding to make the navbar wider */
+  }
+
+  .logo {
+    font-size: 28px; /* Slightly larger logo font size for a balanced look */
+  }
+
+  .navigation {
+    display: flex; /* Show navbar for larger screens */
+    font-size: 18px; /* Slightly increase button font size if needed */
+  }
 }

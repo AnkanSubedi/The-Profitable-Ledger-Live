@@ -9,6 +9,11 @@ function Services() {
             <h3 className="services-title">Discover Our Services</h3>
             <ul className="services-list">
                 <li className="service-item">
+                    <FontAwesomeIcon icon={faClipboardCheck} className="service-icon" />
+                    <h4>Complimentary Bookkeeping Health Check</h4>
+                    <p>This December, let us assess your bookkeeping for free, providing actionable recommendations to streamline your processes.</p>
+                </li>
+                <li className="service-item">
                     <FontAwesomeIcon icon={faBriefcase} className="service-icon" />
                     <h4>Comprehensive Small Business Support</h4>
                     <p>We help SMEs streamline operations with tailored bookkeeping, internal controls, and expert advice to empower their growth.</p>
@@ -42,11 +47,6 @@ function Services() {
                     <FontAwesomeIcon icon={faUserTie} className="service-icon" />
                     <h4>Accountant Training</h4>
                     <p>Equip your team with the knowledge and skills for daily tasks, reporting, and compliance through our tailored training.</p>
-                </li>
-                <li className="service-item">
-                    <FontAwesomeIcon icon={faClipboardCheck} className="service-icon" />
-                    <h4>Complimentary Bookkeeping Health Check</h4>
-                    <p>This December, let us assess your bookkeeping for free, providing actionable recommendations to streamline your processes.</p>
                 </li>
             </ul>
         </section>

@@ -3,8 +3,13 @@ import './About.css';
 
 function AboutPage() {
     return (
+        <React.Fragment>
+            {/* Banner Section  */}
+        <section id="main" className="main-section">               
+            <div className="banner-text">About Us</div>     
+        </section>
         <section id="about-page" className="about-main-section">
-            <h2 className="about-title">About Us</h2>
+            {/* <h2 className="about-title">About Us</h2> */}
             <p className="about-intro">
                 At <strong>TPL Accounting and Bookkeeping LLC</strong>, we understand that accounting is more than just numbers—it’s the foundation of your business’s success. Our mission is to empower small and medium-sized enterprises (SMEs) by taking the burden of financial management off your shoulders, allowing you to focus on growth and success.
             </p>
@@ -29,6 +34,7 @@ function AboutPage() {
                 </ul>
             </div>
         </section>
+        </React.Fragment>
     );
 }
 
