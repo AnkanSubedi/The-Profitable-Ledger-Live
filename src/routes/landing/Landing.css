@@ -305,3 +305,109 @@ body {
     padding: 8px;
   }
 }
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+  /* Navbar */
+  .App-header {
+    padding: 15px 10px; /* Reduce padding for smaller navbar */
+  }
+
+  .logo {
+    font-size: 20px; /* Reduce logo font size for better fit */
+  }
+
+  .hamburger {
+    font-size: 20px; /* Adjust hamburger size */
+  }
+
+  /* Main Section */
+  .main-section {
+    padding: 10px; /* Reduce padding around the section */
+    height: 60vh; /* Slightly reduce height for better fit */
+  }
+
+  .banner-text {
+    font-size: 1.5rem; /* Reduce text size for better fit */
+    line-height: 1.2; /* Adjust line spacing */
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .services-section h3 {
+    font-size: 1.2rem; /* Reduce heading size */
+  }
+
+  .services-section li {
+    font-size: 0.8rem; /* Reduce text size */
+    line-height: 1.3; /* Adjust spacing */
+  }
+
+  /* About Section */
+  .about-section {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .about-section h3 {
+    font-size: 1.2rem; /* Adjust heading size */
+  }
+
+  .about-section p {
+    font-size: 0.9rem; /* Reduce paragraph font size */
+    line-height: 1.4; /* Adjust line spacing */
+  }
+
+  /* Team Section */
+  .team-section {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .team-section h3 {
+    font-size: 1.2rem; /* Adjust heading size */
+  }
+
+  .team-section p {
+    font-size: 0.8rem; /* Reduce paragraph font size */
+    line-height: 1.3; /* Adjust line spacing */
+  }
+
+  /* Ribbon Section */
+  .ribbon-section {
+    height: 30vh; /* Reduce ribbon height */
+    padding: 10px; /* Add padding for readability */
+  }
+
+  .ribbon-text {
+    font-size: 1.2rem; /* Reduce text size */
+    padding: 0 10px; /* Add padding */
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .contact-section h3 {
+    font-size: 1.2rem; /* Adjust heading size */
+  }
+
+  .contact-section form {
+    gap: 8px; /* Reduce gap between inputs */
+  }
+
+  .contact-section input,
+  .contact-section textarea,
+  .contact-section select {
+    font-size: 0.8rem; /* Reduce font size */
+    padding: 8px; /* Adjust padding */
+  }
+
+  .contact-section button {
+    font-size: 0.8rem; /* Reduce button text size */
+    padding: 8px; /* Adjust button padding */
+  }
+}
+
