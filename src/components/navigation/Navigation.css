@@ -1,12 +1,16 @@
 /* General styles for header */
 .App-header {
   background-color: #A42134;
-  padding: 20px 30px; /* Increase padding to make the header taller */
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  flex-wrap: wrap; /* Keeps responsive behavior */
+  position: relative; /* Keep the Navbar's default position */
+  top: 0; /* Default top position */
+  width: 100%;
+  z-index: 900;
+  transition: margin-top 0.3s ease; /* Smooth adjustment when Alert is dismissed */
 }
 
 /* Logo styling */

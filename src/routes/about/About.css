@@ -1,62 +1,102 @@
-/* .main-section {
+/* Title Section */
+.about-title-section {
     position: relative;
     width: 100%;
-    height: 35vh;
+    height: 30vh; /* Slightly taller for a grander look */
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url(../../assets/bannerImage2.jpg);
+    background-image: url(../../assets/aboutBanner.jpg); /* Replace with your banner */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  } */
+    margin-bottom: 50px;
+}
 
-/* About Page Styles */
+.about-title-text {
+    position: relative;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add depth */
+    text-align: center;
+    z-index: 1;
+}
+
+.about-title-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Stronger overlay */
+    z-index: 0;
+}
+
+/* Main Section */
 .about-main-section {
-    padding: 60px 20px;
-    background-color: #f0f0f0;
-    color: #333;
+    padding: 50px 20px;
+    background-color: #f7f7f7;
     font-family: 'Arial', sans-serif;
+    color: #333;
     text-align: center;
 }
 
-.about-title {
-    font-size: 2.5rem;
-    color: #222;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+/* Content Container */
+.about-content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white; /* Add a card-like effect */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Intro Section */
 .about-intro {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #555;
     line-height: 1.8;
     margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: justify;
 }
 
+/* Headings */
 .about-mission h3,
 .about-expertise h3,
 .about-values h3 {
     font-size: 1.8rem;
     color: #201E4B;
     margin-bottom: 20px;
-    text-align: center;
+    position: relative;
 }
 
+.about-mission h3::after,
+.about-expertise h3::after,
+.about-values h3::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #A42134; /* Accent color */
+}
+
+/* Paragraphs and Lists */
 .about-mission p,
 .about-expertise ul,
 .about-values ul {
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.8;
     max-width: 800px;
     margin: 0 auto 30px;
-    text-align: left;
+    text-align: justify;
 }
 
 .about-expertise ul,
@@ -67,19 +107,48 @@
 
 .about-expertise ul li,
 .about-values ul li {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 15px;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .about-values ul li strong {
-    color: #333;
+    color: #201E4B;
+    font-weight: bold;
 }
 
-.about-closing {
-    font-size: 1.2rem;
-    color: #201E4B;
-    margin-top: 40px;
-    font-weight: bold;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-title-text {
+        font-size: 2rem;
+    }
+
+    .about-intro {
+        font-size: 1.1rem;
+    }
+
+    .about-mission p,
+    .about-expertise ul li,
+    .about-values ul li {
+        font-size: 1rem;
+    }
+
+    .about-content-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title-text {
+        font-size: 1.8rem;
+    }
+
+    .about-main-section {
+        padding: 30px 15px;
+    }
+
+    .about-intro {
+        font-size: 1rem;
+    }
 }

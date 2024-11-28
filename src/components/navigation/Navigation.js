@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import "./Navigation.css";
 import ScrollToTopButton from "../scrollToTop/ScrollToTopButton";
 
-function Navigation() {
+function Navigation({ topOffset }) { // Accept the topOffset as a prop
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
@@ -25,7 +25,7 @@ function Navigation() {
 
     return (
         <>
-            <header className="App-header">
+            <header className="App-header" style={{ marginTop: topOffset }}> {/* Dynamically set margin */}
                 <div className="logo" onClick={() => handleNavigation("/")}>
                     The Profitable Ledger
                 </div>
