@@ -1,0 +1,29 @@
+.alert {
+    background-color: #201E4B; /* Dark blue background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    text-align: center;
+    position: static; /* Default, so it sits above the Navbar */
+    width: 100%;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: flex; /* Align close button */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Vertically align content */
+    gap: 10px; /* Add spacing between the text and close button */
+  }
+  
+  .alert-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .alert-close:hover {
+    color: #A42134; /* Red on hover */
+  }
+  

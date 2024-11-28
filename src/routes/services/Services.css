@@ -1,3 +1,39 @@
+.services-title-section {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(../../assets/serviceBanner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+  
+.services-title-text {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #ffffffff;
+    text-align: center;
+    z-index: 1;
+}
+
+.services-title-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
 /* General Section Styles */
 .services-main-section {
     padding: 60px 20px;
@@ -5,13 +41,6 @@
     font-family: 'Arial', sans-serif;
     color: #333;
     text-align: center;
-}
-
-.services-title {
-    font-size: 2.5rem;
-    color: #222;
-    margin-bottom: 40px;
-    text-transform: uppercase;
 }
 
 .services-list {
@@ -50,8 +79,95 @@
     line-height: 1.6;
 }
 
+.service-item-deal {
+    background-color: #201E4B; /* Dark background */
+    color: white; /* Inverted text */
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 20px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer; /* Indicate clickability */
+}
+
+.service-item-deal h4,
+.service-item-deal p {
+    color: white; /* Ensure text is visible */
+}
+
+.service-item-deal:hover {
+    background-color: #A42134; /* Slightly lighter on hover */
+}
+
+.service-icon-deal {
+    font-size: 2.5rem;
+    color: white; /* Inverted icon color */
+}
+
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #201E4B;
+}
+
+.popup-content li {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.popup-close {
+    background: #201E4B;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-close:hover {
+    background: #A42134;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
+
+    .services-title-text{
+        font-size: 1.8rem;
+        padding: 0 10px;
+    }
+
     .service-item {
         flex-direction: column;
         align-items: flex-start;
@@ -62,6 +178,19 @@
     }
 
     .service-item h4 {
+        text-align: left;
+    }
+
+    .service-item-deal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-icon-deal {
+        margin-bottom: 10px;
+    }
+
+    .service-item-deal h4 {
         text-align: left;
     }
 }
