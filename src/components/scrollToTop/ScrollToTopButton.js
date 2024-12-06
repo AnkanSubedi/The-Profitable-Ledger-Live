@@ -45,7 +45,7 @@ function ScrollToTopButton() {
             {isVisible && (
                 <button
                     className="scroll-to-top"
-                    style={{ bottom: isFooterVisible ? "100px" : "20px" }}
+                    style={{ bottom: isFooterVisible ? "120px" : "20px" }}
                     onClick={scrollToTop}
                 >
                     {/* Add your SVG or styling here */}

@@ -1,51 +1,30 @@
 import React from "react";
 import './Team.css';
-import { faUsers, faMedal, faShieldAlt } from '@fortawesome/free-solid-svg-icons'; // Icons for core values
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MurugeshPalaniImage from "../../assets/MurugeshPalani.jpg";
 
 function Team() {
-    const coreValues = [
-        {
-            title: "Collaboration",
-            description: "Working together to deliver the best results for our clients.",
-            icon: faUsers, // Icon for collaboration
-        },
-        {
-            title: "Excellence",
-            description: "Committed to accuracy, timeliness, and top-notch service.",
-            icon: faMedal, // Icon for excellence
-        },
-        {
-            title: "Integrity",
-            description: "Building trust through honesty and transparency.",
-            icon: faShieldAlt, // Icon for integrity
-        },
-    ];
-
     const teamMembers = [
         {
-            name: "John Doe",
+            name: "Murugesh Palani FCMA (UK), CGMA, MBA (PIM USJ)",
             title: "Founder & CEO",
-            description: "Chartered Accountant with over a decade of experience in tax compliance and financial strategy.",
-            backgroundImage: "../../assets/bannerImage2.jpg", // Replace with actual image path
-        },
-        {
-            name: "Jane Smith",
-            title: "Senior Tax Consultant",
-            description: "Specializing in VAT compliance and corporate tax solutions for SMEs.",
-            backgroundImage: "../../assets/janeSmith.jpg", // Replace with actual image path
-        },
-        {
-            name: "Michael Brown",
-            title: "Bookkeeping Expert",
-            description: "Ensures seamless financial records and accurate reports for decision-making.",
-            backgroundImage: "../../assets/michaelBrown.jpg", // Replace with actual image path
-        },
-        {
-            name: "Sarah Johnson",
-            title: "Software Implementation Lead",
-            description: "Skilled in integrating accounting software and training teams for success.",
-            backgroundImage: "../../assets/sarahJohnson.jpg", // Replace with actual image path
+            description: `A seasoned finance executive with over 27 years of experience in accounting, corporate finance, 
+                          taxation, and strategic leadership. Proven expertise in financial planning, cost optimization, 
+                          regulatory compliance, and stakeholder management, consistently driving growth and operational 
+                          efficiency across leading organizations. This includes 16 years in UAE and 11 years in Sri Lanka.`,
+            image: MurugeshPalaniImage, // Replace with actual image path
+            keyCompetencies: [
+                "Strategic Financial Leadership",
+                "Budgeting, Forecasting & Financial Planning",
+                "Risk & Compliance Management",
+                "Cost Reduction & Operational Efficiency",
+                "Insurance Accounting & Regulatory Affairs",
+                "Mergers & Acquisitions",
+                "Stakeholder & Board Relations",
+                "Financial Reporting & Analysis",
+                "Team Leadership & Talent Development",
+                "Investment & Asset Management",
+                "Technology Integration in Financial Systems",
+            ],
         },
     ];
 
@@ -64,35 +43,32 @@ function Team() {
                     passion for helping businesses thrive.
                 </p>
 
-                {/* Core Values */}
-                <div className="team-values">
-                    <h3>Our Core Values</h3>
-                    <ul>
-                        {coreValues.map((value, index) => (
-                            <li key={index} className="team-value-card">
-                                <FontAwesomeIcon icon={value.icon} className="team-value-icon" />
-                                <div className="team-value-text">
-                                    <h4>{value.title}</h4>
-                                    <p>{value.description}</p>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
                 {/* Meet Our Key Members */}
                 <div className="team-members">
                     <h3>Meet Our Key Members</h3>
                     <ul>
                         {teamMembers.map((member, index) => (
-                            <li
-                                key={index}
-                                className="team-member-card"
-                                style={{ backgroundImage: `url(${member.backgroundImage})` }}
-                            >
-                                <h4>{member.name}</h4>
-                                <p>{member.title}</p>
-                                <p>{member.description}</p>
+                            <li key={index} className="team-member-profile">
+                                <div className="team-member-left">
+                                    <img 
+                                        src={member.image} 
+                                        alt={`${member.name}`} 
+                                        className="team-member-image" 
+                                    />
+                                </div>
+                                <div className="team-member-right">
+                                    <h4>{member.name}</h4>
+                                    <p className="team-member-title">{member.title}</p>
+                                    <p className="team-member-description">{member.description}</p>
+                                    <div className="key-competencies">
+                                        <h5>Key Competencies</h5>
+                                        <ul>
+                                            {member.keyCompetencies.map((competency, idx) => (
+                                                <li key={idx}>{competency}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
                         ))}
                     </ul>

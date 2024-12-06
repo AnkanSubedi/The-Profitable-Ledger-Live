@@ -31,24 +31,19 @@ function Services() {
                     >
                         <FontAwesomeIcon icon={faClipboardCheck} className="service-icon-deal" />
                         <h4>Complimentary Bookkeeping Health Check</h4>
-                        <p>This December, let us assess your bookkeeping for free, providing actionable recommendations to streamline your processes.</p>
+                        <p>As a start let us assess your bookkeeping for free, providing actionable recommendations to streamline your processes. This is an limited offer with time bound</p>
                     </li>
 
                     {/* Other service cards */}
                     <li className="service-item">
                         <FontAwesomeIcon icon={faBriefcase} className="service-icon" />
                         <h4>Comprehensive Small Business Support</h4>
-                        <p>We help Small/Medium businesses streamline operations with tailored bookkeeping, internal controls, and expert advice to empower their growth.</p>
+                        <p>We help SMEs streamline operations with tailored bookkeeping, internal controls, and expert advice to empower their growth. We also guide them on business plan and to achieve the vision partnering together with TPL team</p>
                     </li>
                     <li className="service-item">
                         <FontAwesomeIcon icon={faChartLine} className="service-icon" />
-                        <h4>VAT & Corporate Tax Expertise</h4>
-                        <p>Simplify tax compliance with our expert services, including T2 filings, VAT support, and strategic tax planning for your business.</p>
-                    </li>
-                    <li className="service-item">
-                        <FontAwesomeIcon icon={faShieldAlt} className="service-icon" />
-                        <h4>Insurance Service Accounting</h4>
-                        <p>Streamline your insurance accounting processes with expert support on IFRS 17 compliance, regulatory reporting, and financial management tailored for the insurance sector.</p>
+                        <h4>Corporate Tax and VAT Expertise</h4>
+                        <p>Simplify tax compliance with our expert services,  Corporate tax registration, VAT support, and strategic tax planning for your business</p>
                     </li>
                     <li className="service-item">
                         <FontAwesomeIcon icon={faMoneyBill} className="service-icon" />
@@ -63,12 +58,17 @@ function Services() {
                     <li className="service-item">
                         <FontAwesomeIcon icon={faLaptop} className="service-icon" />
                         <h4>Accounting Software Implementation & Training</h4>
-                        <p>Integrate and master accounting software with our hands-on setup and training services.</p>
+                        <p>Integrate and master accounting software with our hands-on setup and training services. This includes setting up chart of accounts, invoice setup, AR, AP and management accounting</p>
                     </li>
                     <li className="service-item">
                         <FontAwesomeIcon icon={faUserTie} className="service-icon" />
                         <h4>Accountant Training</h4>
                         <p>Equip your team with the knowledge and skills for daily tasks, reporting, and compliance through our tailored training.</p>
+                    </li>
+                    <li className="service-item">
+                        <FontAwesomeIcon icon={faShieldAlt} className="service-icon" />
+                        <h4>Insurance Accounting</h4>
+                        <p>Assisting on all insurance accounting needs such as Commision process, accounts receivables, accounts payables IFRS 17 accounting, ECL calculation ect..</p>
                     </li>
                 </ul>
 
