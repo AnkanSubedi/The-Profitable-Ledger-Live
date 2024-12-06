@@ -4,15 +4,50 @@
     display: flex;
     justify-content: center; /* Center-align the content */
     align-items: center;
-    height: 60px; /* Adjust height as needed */
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to fit content */
     color: #ffffff; /* Text color */
     font-family: "termina"; /* Match the navbar font */
     font-size: 14px; /* Adjust font size */
     margin-top: auto; /* Push footer to the bottom of the page */
     width: 100%; /* Ensure it spans the full width */
+    text-align: center; /* Center the text */
 }
 
 .footer-content p {
-    margin: 0;
-    font-size: inherit;
+    margin: 5px 0; /* Add slight spacing between lines */
+    font-size: inherit; /* Match the inherited font size */
+}
+
+.footer-content a {
+    color: #ffffff; /* Keep link color consistent with text */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-content a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-footer {
+        font-size: 12px; /* Reduce font size for smaller screens */
+        padding: 10px; /* Decrease padding */
+    }
+
+    .footer-content p {
+        margin: 3px 0; /* Reduce spacing between lines */
+    }
+}
+
+@media (max-width: 480px) {
+    .app-footer {
+        font-size: 10px; /* Further reduce font size for very small screens */
+        padding: 8px; /* Reduce padding further */
+    }
+
+    .footer-content p {
+        margin: 2px 0; /* Further reduce spacing */
+        word-wrap: break-word; /* Ensure long text or links wrap properly */
+    }
 }

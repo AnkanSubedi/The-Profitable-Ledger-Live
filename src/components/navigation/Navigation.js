@@ -1,33 +1,24 @@
 import React, { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
 import ScrollToTopButton from "../scrollToTop/ScrollToTopButton";
 
-function Navigation({ topOffset }) { // Accept the topOffset as a prop
+function Navigation({ topOffset }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation();
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-    const handleNavigation = (sectionId) => {
+    const handleNavigation = (path) => {
         setIsMenuOpen(false); // Close the menu
-        if (location.pathname !== "/") {
-            navigate("/");
-        }
-        setTimeout(() => {
-            const sectionElement = document.getElementById(sectionId);
-            if (sectionElement) {
-                sectionElement.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-        }, 100); // Allow time for the Landing page to load
+        navigate(path); // Navigate to the specified route
     };
 
     return (
         <>
-            <header className="App-header" style={{ marginTop: topOffset }}> {/* Dynamically set margin */}
+            <header className="App-header" style={{ marginTop: topOffset }}>
                 <div className="logo" onClick={() => handleNavigation("/")}>
-                    The Profitable Ledger
+                    THE PROFITABLE LEDGER
                 </div>
                 <button className="hamburger" onClick={toggleMenu}>
                     ☰
@@ -35,18 +26,18 @@ function Navigation({ topOffset }) { // Accept the topOffset as a prop
                 <div className={`menu-overlay ${isMenuOpen ? "open" : ""}`}>
                     <nav className="menu-links">
                         <button onClick={() => handleNavigation("/")}>Main</button>
-                        <button onClick={() => handleNavigation("services")}>Services</button>
-                        <button onClick={() => handleNavigation("about")}>What We Do</button>
-                        <button onClick={() => handleNavigation("team")}>Our Team</button>
-                        <button onClick={() => handleNavigation("contact")}>Contact Us</button>
+                        <button onClick={() => handleNavigation("/services")}>Services</button>
+                        <button onClick={() => handleNavigation("/about")}>About Us</button>
+                        <button onClick={() => handleNavigation("/team")}>Our Team</button>
+                        <button onClick={() => handleNavigation("/contact")}>Contact Us</button>
                     </nav>
                 </div>
                 <nav className="navigation">
                     <button onClick={() => handleNavigation("/")}>Main</button>
-                    <button onClick={() => handleNavigation("services")}>Services</button>
-                    <button onClick={() => handleNavigation("about")}>What We Do</button>
-                    <button onClick={() => handleNavigation("team")}>Our Team</button>
-                    <button onClick={() => handleNavigation("contact")}>Contact Us</button>
+                    <button onClick={() => handleNavigation("/services")}>Services</button>
+                    <button onClick={() => handleNavigation("/about")}>About Us</button>
+                    <button onClick={() => handleNavigation("/team")}>Our Team</button>
+                    <button onClick={() => handleNavigation("/contact")}>Contact Us</button>
                 </nav>
             </header>
 
