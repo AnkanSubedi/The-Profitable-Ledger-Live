@@ -153,3 +153,19 @@
     display: none; /* Hide desktop menu on small screens */
   }
 }
+
+@media (max-width: 1095px)
+{
+  .logo{
+    font-size: 24px;
+  }
+
+  .tagline{
+    font-size: 14px;
+  }
+
+  .navigation button {
+    font-size: 14px;
+  }
+  
+}
