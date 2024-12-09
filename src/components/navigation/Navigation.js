@@ -35,19 +35,23 @@ function Navigation({ topOffset }) {
                 </button>
                 <div className={`menu-overlay ${isMenuOpen ? "open" : ""}`}>
                     <nav className="menu-links">
+                        <button onClick={() => handleNavigation("/")}>Main</button>
                         <button onClick={() => handleNavigation("/services")}>Services</button>
                         <button onClick={() => handleNavigation("/about")}>About Us</button>
                         <button onClick={() => handleNavigation("/team")}>Our Team</button>
+                        <button onClick={() => handleNavigation("/rcm")}>RCM</button>
                         <button onClick={() => handleNavigation("/contact")}>Contact Us</button>
-                        <button onClick={() => handleNavigation("/rcm")}>Revenue Cycle Management</button>
+
                     </nav>
                 </div>
                 <nav className="navigation">
+                    <button onClick={() => handleNavigation("/")}>Main</button>
                     <button onClick={() => handleNavigation("/services")}>Services</button>
                     <button onClick={() => handleNavigation("/about")}>About Us</button>
                     <button onClick={() => handleNavigation("/team")}>Our Team</button>
+                    <button onClick={() => handleNavigation("/rcm")}>RCM</button>
                     <button onClick={() => handleNavigation("/contact")}>Contact Us</button>
-                    <button onClick={() => handleNavigation("/rcm")}>Revenue Cycle Management</button>
+
                 </nav>
             </header>
 

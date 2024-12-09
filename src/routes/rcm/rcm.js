@@ -104,60 +104,7 @@ function RCM() {
                     <li>Scalable Services for All Types of Organizations</li>
                 </ul>
             </section>
-
-            {/* Competitive Pricing Section */}
-            <section className="rcm-pricing">
-                <button className="pricing-button" onClick={togglePricingPopup}>
-                    View Our Competitive Pricing!
-                </button>
-            </section>
-
-            {/* Pricing Popup */}
-            {showPricingPopup && (
-                <div className="pricing-popup">
-                    <div className="pricing-popup-content">
-                        <button className="close-popup" onClick={togglePricingPopup}>
-                            ×
-                        </button>
-                        <h2>Our Competitive Pricing</h2>
-                        <table className="pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>Service</th>
-                                    <th>Description</th>
-                                    <th>Price per Claim</th>
-                                    <th>Price per Claims</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Submission & Resubmission of claims</td>
-                                    <td>VNM will submit the claims to the TPA and insurance companies</td>
-                                    <td>AED 1.5</td>
-                                    <td>AED 2.00</td>
-                                </tr>
-                                <tr>
-                                    <td>Submission & Resubmission of claims with reporting and dashboard</td>
-                                    <td>With submission we will also provide dashboard as management information</td>
-                                    <td>AED 2.00</td>
-                                    <td>AED 2.50</td>
-                                </tr>
-                                <tr>
-                                    <td>Submission & Resubmission of claims with reporting with dashboard reconciliation and collection</td>
-                                    <td>With above service VNM will also be assisting on collection of claims from insurance companies</td>
-                                    <td>AED 3.00</td>
-                                    <td>AED 3.50</td>
-                                </tr>
-                                <tr>
-                                    <td>Add-on services such as training, business development support</td>
-                                    <td>VNM will provide additional services as stated</td>
-                                    <td colspan="2">ON CASE BY CASE</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            )}
+            
         </div>
     );
 }

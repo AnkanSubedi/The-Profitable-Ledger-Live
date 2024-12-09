@@ -7,7 +7,6 @@ function Footer() {
             <div className="footer-content">
                 <p>Telephone: +971 501032752</p>
                 <p>murugesh.p@theprofitableledger.com</p>
-                <p>murugeshpalani@yahoo.com</p>
             </div>
         </footer>
     );
