@@ -1,0 +1,215 @@
+/* General Container */
+.rcm-container {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    line-height: 1.7;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.rcm-hero {
+    background: url('./../../assets/Ribbon.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 90%;
+}
+
+.rcm-hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rcm-hero p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* Expansion Sections */
+.rcm-expansion-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #fff;
+    align-items: flex-start; /* Align items at the top to prevent stretching */
+}
+
+.expansion-section {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, height 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+    height: auto; /* Let the height be controlled dynamically by the content */
+    min-height: 120px; /* Add a consistent base height for collapsed sections */
+}
+
+.expansion-section.expanded {
+    height: auto; /* Allow expanded section to grow naturally */
+}
+
+.expansion-section:not(.expanded) {
+    height: 120px; /* Fix the height of non-expanded sections */
+}
+
+.expansion-section h3 {
+    font-size: 1.5rem;
+    color: #a42134;
+    margin-bottom: 10px;
+}
+
+.expansion-section .expanded-content {
+    display: none; /* Default: hidden */
+    margin-top: 10px;
+    text-align: left;
+}
+
+.expansion-section.expanded .expanded-content {
+    display: block; /* Display content for expanded section */
+}
+
+.expansion-section:hover {
+    transform: translateY(-5px);
+}
+
+/* Value Addition Section */
+.rcm-value-addition {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.rcm-value-addition h2 {
+    font-size: 2rem;
+    color: #a42134;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+}
+
+.rcm-value-addition ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Center the content horizontally */
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 2;
+    max-width: 600px; /* Limit the width of the content for better alignment */
+    text-align: left; /* Align the list items to the left */
+}
+
+.rcm-value-addition ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.rcm-value-addition ul li::before {
+    content: "✔";
+    color: #a42134;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+/* Competitive Pricing Section */
+.rcm-pricing {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.pricing-button {
+    background-color: #a42134;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.pricing-button:hover {
+    background-color: #871b2b;
+}
+
+/* Pricing Popup */
+.pricing-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.pricing-popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.pricing-table th,
+.pricing-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.pricing-table th {
+    background: rgb(252, 115, 115);
+    color: #333;
+}
+
+.pricing-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.pricing-table tr:hover {
+    background: #eafaf1;
+}
