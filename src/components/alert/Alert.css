@@ -1,13 +1,13 @@
 .alert {
-    background-color: #201E4B; /* Dark blue background */
+    background-color: #a42134; /* Dark blue background */
     color: white; /* White text */
-    padding: 10px 20px;
+    padding: 5px 5px;
     text-align: center;
     position: static; /* Default, so it sits above the Navbar */
     width: 100%;
     z-index: 1000;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-family: "termina";
+    font-size: 20px;
     display: flex; /* Align close button */
     justify-content: center; /* Center the content */
     align-items: center; /* Vertically align content */
@@ -18,12 +18,18 @@
     background: none;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
   }
   
   .alert-close:hover {
-    color: #A42134; /* Red on hover */
+    color: #E8D8C4; /* Red on hover */
+  }
+
+  @media (max-width: 480px) {
+    .alert {
+      font-size: 10px;
+    }
   }
   

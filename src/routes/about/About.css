@@ -70,7 +70,7 @@
 .about-expertise h3,
 .about-values h3 {
     font-size: 1.8rem;
-    color: #201E4B;
+    color: #A42134;
     margin-bottom: 20px;
     position: relative;
 }
@@ -85,7 +85,7 @@
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background-color: #A42134; /* Accent color */
+    background-color: #201E4B; /* Accent color */
 }
 
 /* Paragraphs and Lists */
@@ -114,8 +114,14 @@
 }
 
 .about-values ul li strong {
-    color: #201E4B;
+    color: #A42134;
     font-weight: bold;
+}
+
+.about-values p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 /* Responsive Styles */

@@ -125,28 +125,47 @@
 }
 
 /* Responsive Styles */
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .team-member-profile {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align all items horizontally */
+        text-align: center; /* Ensure the text content is centered */
     }
 
     .team-member-left {
-        max-width: 100%;
+        max-width: 100%; /* Allow the image container to use the full width */
+        text-align: center; /* Center-align the image */
+        margin-bottom: 20px; /* Add spacing between image and text */
     }
 
     .team-member-image {
-        height: auto;
+        width: 100%; /* Ensure the image spans the full container width */
+        max-width: 300px; /* Add a limit to prevent excessive stretching */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image scales properly */
+        margin: 0 auto; /* Center the image horizontally */
+        display: block; /* Block-level element for centering */
     }
 
     .team-member-right {
-        padding-left: 0;
-        text-align: center;
+        padding-left: 0; /* Remove padding to center text */
+        text-align: center; /* Center-align all text content */
+    }
+
+    .team-member-right h4 {
+        font-size: 1.8rem; /* Adjust font size for headings */
+        margin-bottom: 10px; /* Add spacing below the name */
     }
 
     .key-competencies ul {
-        padding-left: 0;
+        padding-left: 0; /* Remove unnecessary padding */
+        text-align: left; /* Align bullet points to the left */
+        display: inline-block; /* Ensure alignment within the centered content */
+        margin: 0 auto; /* Center the competencies section */
     }
 }
+
 
 @media (max-width: 768px) {
     .team-member-profile {
