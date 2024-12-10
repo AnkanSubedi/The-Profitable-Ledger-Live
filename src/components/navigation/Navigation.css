@@ -163,7 +163,7 @@
   }
 }
 
-@media (max-width: 1095px) {
+@media (max-width: 1130px) {
   .logo {
     font-size: 24px;
   }
@@ -180,4 +180,12 @@
   .navigation button {
     font-size: 14px;
   }
+}
+
+@media (max-width: 1350px) {
+  .navigation{
+    gap: 40px;
+    margin-right: 10px;
+  }
+
 }
