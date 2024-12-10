@@ -58,7 +58,7 @@ function Landing() {
             {/* Contact Section */}
             <section id="contact" className="contact-section">
                 <h3>Contact Us</h3>
-                <form>
+                <form action="https://formspree.io/f/xvgonbza" method= "POST">
                     <label>Name</label>
                     <input type="text" name="name" required />
 

@@ -101,10 +101,10 @@ function RCM() {
                     <li>Dedicated Team Support</li>
                     <li>Expertise You Can Rely On</li>
                     <li>Customized Solutions for Your Organization</li>
-                    <li>Scalable Services for All Types of Organizations</li>
+                    <li>Scalable service strategy about right sizing research and analysis</li>
                 </ul>
             </section>
-            
+
         </div>
     );
 }
