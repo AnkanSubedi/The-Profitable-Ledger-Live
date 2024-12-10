@@ -3,10 +3,10 @@
   background-color: #000;
   padding: 20px;
   display: flex;
-  flex-direction: column; /* Stack header elements vertically */
-  align-items: center; /* Center align everything horizontally */
-  justify-content: center;
-  flex-wrap: wrap; /* Keeps responsive behavior */
+  flex-direction: row; /* Align logo and navigation in a row */
+  align-items: flex-start; /* Align items at the top */
+  justify-content: space-between; /* Space between logo and navigation */
+  flex-wrap: nowrap; /* Prevent wrapping of elements */
   position: relative; /* Keep the Navbar's default position */
   top: 0; /* Default top position */
   width: 100%;
@@ -17,11 +17,11 @@
 /* Logo container styling */
 .logo-container {
   display: flex;
-  flex-direction: row; /* Ensure logo image and text are in a row */
-  align-items: center; /* Vertically align logo and text */
-  justify-content: center; /* Center horizontally */
-  margin-bottom: 20px; /* Space below the logo-container */
+  flex-direction: row; /* Logo image and text are side by side */
+  align-items: flex-start; /* Align logo and text at the top */
+  justify-content: flex-start; /* Align everything to the left */
   cursor: pointer; /* Make the entire container clickable */
+  padding: 0 10px; /* Add spacing for alignment */
 }
 
 /* Logo image styling */
@@ -35,8 +35,8 @@
 .logo-text {
   display: flex;
   flex-direction: column; /* Stack logo text and tagline vertically */
-  align-items: center; /* Center-align text */
-  text-align: center; /* Ensure text alignment is centered */
+  align-items: flex-start; /* Align text to the left */
+  text-align: left; /* Ensure text alignment is left */
 }
 
 .logo-text:hover .logo,
@@ -49,6 +49,13 @@
   font-size: 28px; /* Slightly larger font size for the logo */
   font-weight: bold;
   color: #a42134;
+  line-height: 1.2; /* Adjust spacing between lines */
+}
+
+.logo .line1,
+.logo .line2,
+.logo .line3 {
+  display: block; /* Ensure each line behaves as a block */
 }
 
 /* Tagline styling */
@@ -63,9 +70,11 @@
 .navigation {
   display: flex;
   flex-direction: row; /* Ensure links are side-by-side */
-  justify-content: center; /* Center the navigation links */
-  gap: 75px; /* Add spacing between navigation links */
-  margin-top: 20px; /* Space above the navigation */
+  justify-content: flex-end; /* Align navigation links to the right */
+  gap: 65px; /* Add spacing between navigation links */
+  margin-top: auto; /* Push navigation towards the bottom */
+  margin-right: 20px;
+  align-self: flex-end; /* Align the navigation to the bottom of the header */
 }
 
 /* Navigation buttons */
@@ -81,7 +90,7 @@
 }
 
 .navigation button:hover {
-  color: #E8D8C4;
+  color: #E8D8C4; /* Match the hover effect with the logo */
 }
 
 /* Hamburger menu for small screens */
@@ -89,7 +98,7 @@
   font-size: 24px;
   background: none;
   border: none;
-  color: white;
+  color: #E8D8C4;
   cursor: pointer;
   display: none; /* Hidden by default */
   z-index: 1001;
@@ -129,7 +138,7 @@
   background: none;
   border: none;
   font-size: 18px;
-  color: white;
+  color: #E8D8C4;
   text-transform: uppercase;
   font-family: "termina";
   cursor: pointer;
@@ -138,13 +147,13 @@
 }
 
 .menu-links button:hover {
-  background-color: white;
+  background-color: #E8D8C4;
   color: #A42134;
   border-radius: 5px;
 }
 
 /* Responsive styles for screens smaller than 950px */
-@media (max-width: 950px) {
+@media (max-width: 980px) {
   .hamburger {
     display: block; /* Show hamburger menu on small screens */
   }
@@ -154,18 +163,21 @@
   }
 }
 
-@media (max-width: 1095px)
-{
-  .logo{
+@media (max-width: 1095px) {
+  .logo {
     font-size: 24px;
   }
 
-  .tagline{
+  .tagline {
     font-size: 14px;
+  }
+
+  .navigation{
+    gap: 40px;
+    margin-right: 10px;
   }
 
   .navigation button {
     font-size: 14px;
   }
-  
 }

@@ -26,7 +26,11 @@ function Navigation({ topOffset }) {
                 <div className="logo-container" onClick={() => handleNavigation("/")}>
                     <img src={LogoImage} alt="Logo" className="logo-image" />
                     <div className="logo-text">
-                        <div className="logo">THE PROFITABLE LEDGER</div>
+                        <div className="logo">
+                            <span className="line1">THE</span>
+                            <span className="line2">PROFITABLE</span>
+                            <span className="line3">LEDGER</span>
+                        </div>
                         <div className="tagline">Your Vision Is Ours</div>
                     </div>
                 </div>
@@ -35,23 +39,21 @@ function Navigation({ topOffset }) {
                 </button>
                 <div className={`menu-overlay ${isMenuOpen ? "open" : ""}`}>
                     <nav className="menu-links">
-                        <button onClick={() => handleNavigation("/")}>Main</button>
+                        <button onClick={() => handleNavigation("/")}>Home</button>
                         <button onClick={() => handleNavigation("/services")}>Services</button>
                         <button onClick={() => handleNavigation("/about")}>About Us</button>
                         <button onClick={() => handleNavigation("/team")}>Our Team</button>
                         <button onClick={() => handleNavigation("/rcm")}>RCM</button>
                         <button onClick={() => handleNavigation("/contact")}>Contact Us</button>
-
                     </nav>
                 </div>
                 <nav className="navigation">
-                    <button onClick={() => handleNavigation("/")}>Main</button>
+                    <button onClick={() => handleNavigation("/")}>Home</button>
                     <button onClick={() => handleNavigation("/services")}>Services</button>
                     <button onClick={() => handleNavigation("/about")}>About Us</button>
                     <button onClick={() => handleNavigation("/team")}>Our Team</button>
                     <button onClick={() => handleNavigation("/rcm")}>RCM</button>
                     <button onClick={() => handleNavigation("/contact")}>Contact Us</button>
-
                 </nav>
             </header>
 
