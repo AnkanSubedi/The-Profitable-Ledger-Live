@@ -158,3 +158,44 @@
         font-size: 1rem;
     }
 }
+
+
+/* Fix for About Page Text on Small Screens */
+@media (max-width: 425px) {
+    /* General fixes for the About Section */
+    .about-main-section {
+      padding: 10px; /* Reduce overall padding */
+    }
+  
+    .about-content-container {
+      display: flex;
+      flex-direction: column; /* Stack the content vertically */
+      gap: 20px; /* Add consistent spacing between sections */
+    }
+  
+    .about-mission,
+    .about-expertise,
+    .about-values {
+      padding: 10px; /* Reduce padding around each section */
+      margin: 0; /* Remove unnecessary margins */
+    }
+  
+    .about-mission h3,
+    .about-expertise h3,
+    .about-values h3 {/* Reduce heading size */
+      margin-bottom: 10px; /* Add consistent spacing below headings */
+      text-align: center; /* Center align headings */
+    }
+  
+    .about-mission p{
+      text-align: center;
+    }
+  
+    .about-values p,
+    .about-expertise ul li,
+    .about-values ul li {
+      line-height: 1.5; /* Ensure consistent line spacing */
+      margin-bottom: 10px; /* Add spacing between paragraphs */
+      text-align: left; /* Justify text for a clean layout */
+    }
+  }  
