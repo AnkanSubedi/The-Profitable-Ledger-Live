@@ -33,7 +33,7 @@ function App() {
 
 export default function AppWrapper() {
   return (
-    <Router basename="/The-Profitable-Ledger-Live">
+    <Router basename="/">
       <App />
     </Router>
   );
