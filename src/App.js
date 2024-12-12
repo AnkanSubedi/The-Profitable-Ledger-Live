@@ -33,7 +33,7 @@ function App() {
 
 export default function AppWrapper() {
   return (
-    <Router basename="/">
+    <Router basename={process.env.PUBLIC_URL}>
       <App />
     </Router>
   );
